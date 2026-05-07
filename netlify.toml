@@ -1,0 +1,39 @@
+headersOrigin = "config"
+plugins = []
+redirects = []
+
+[functions]
+
+  [functions."*"]
+
+[build]
+publish = "/opt/build/repo"
+publishOrigin = "default"
+
+  [build.environment]
+
+  [build.processing]
+
+    [build.processing.css]
+
+    [build.processing.html]
+
+    [build.processing.images]
+
+    [build.processing.js]
+
+  [build.services]
+
+[[headers]]
+for = "/*.html"
+
+  [headers.values]
+  Cache-Control = "public, max-age=0, must-revalidate"
+  Netlify-CDN-Cache-Control = "public, max-age=0, stale-while-revalidate=86400"
+
+[[headers]]
+for = "/"
+
+  [headers.values]
+  Cache-Control = "public, max-age=0, must-revalidate"
+  Netlify-CDN-Cache-Control = "public, max-age=0, stale-while-revalidate=86400"
